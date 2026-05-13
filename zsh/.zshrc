@@ -125,3 +125,9 @@ fi
 
 #starship
 eval "$(starship init zsh)"
+
+# opencode
+export PATH=/home/pamod/.opencode/bin:$PATH
+
+
+export PATH=~/bin:$PATH
