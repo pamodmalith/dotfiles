@@ -129,5 +129,9 @@ eval "$(starship init zsh)"
 # opencode
 export PATH=/home/pamod/.opencode/bin:$PATH
 
+# add fzf shell integration
+source <(fzf --zsh)
 
-export PATH=~/bin:$PATH
+# add zoxide
+eval "$(zoxide init zsh)"
+
