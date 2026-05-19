@@ -1,0 +1,15 @@
+[Unit]
+Description=Run rclone backup daily
+
+[Timer]
+# Run at 8:00 PM every day
+OnCalendar=*-*-* 20:00:00
+
+# If the machine was off at 20:00, run shortly after next boot
+Persistent=true
+
+# Don't pile up if a run takes too long
+OnBootSec=10min
+
+[Install]
+WantedBy=timers.target

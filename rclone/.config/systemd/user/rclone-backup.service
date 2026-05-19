@@ -1,0 +1,15 @@
+[Unit]
+Description=rclone backup to Google Drive
+# Only run if network is available
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/pamod/.local/bin/rclone-backup.sh
+# Restart on failure, up to 3 times
+Restart=on-failure
+RestartSec=5min
+
+[Install]
+WantedBy=default.target

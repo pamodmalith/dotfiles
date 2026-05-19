@@ -1,0 +1,44 @@
+# ── EXCLUDE: Large video/audio ─────────────────────────────
+- **/*.mp4
+- **/*.mkv
+- **/*.wmv
+- **/*.m4a
+- **/*.webm
+- **/*.avi
+
+# ── EXCLUDE: Lecture recording folders (even non-video files inside) ──
+- Lecture Recordings/**
+- Recordings/**
+- REC/**
+- DBMS Questions Video - Assignment/**
+- WP Questions Video - Assignment/**
+- 2025-12-29 15.54.43 Dinindu Subasinghe's Zoom Meeting/**
+
+# ── EXCLUDE: Dev junk ──────────────────────────────────────
+- **/node_modules/**
+- **/__pycache__/**
+- **/*.pyc
+- **/.venv/**
+- **/venv/**
+- **/dist/**
+- **/build/**
+- **/.next/**
+- **/.git/**
+- **/package-lock.json
+
+# ── EXCLUDE: System junk ───────────────────────────────────
+- **/.cache/**
+- **/*.tmp
+- **/*.temp
+- **/*.swp
+- **/*~
+- **/.DS_Store
+- **/Thumbs.db
+
+# ── EXCLUDE: Large archives you can recreate ───────────────
+- **/*.zip
+- **/*.rar
+- **/*.iso
+
+# ── INCLUDE EVERYTHING ELSE ────────────────────────────────
++ **
