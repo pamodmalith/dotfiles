@@ -135,3 +135,7 @@ source <(fzf --zsh)
 # add zoxide
 eval "$(zoxide init zsh)"
 
+# chpwd hook
+chpwd(){
+  ls
+}
