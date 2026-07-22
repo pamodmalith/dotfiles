@@ -8,6 +8,7 @@ local fileManager       = "thunar"
 local browser           = "firefox"
 local launcher          = "rofi -show drun -show-icons"
 local menu              = "rofi -show run"
+local clipboard         = "rofi -modi clipboard:~/.local/bin/cliphist-rofi-img -show clipboard -show-icons"
 local reload_waybar     = "~/.config/hypr/scripts/waybar-reload.sh"
 local shutdown_hyprland = "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"
 
@@ -19,10 +20,11 @@ local mainMod           = "SUPER"         -- Sets "Windows" key as main modifier
 local secondMod         = "SUPER + SHIFT" -- Sets "Windows + Shift" as secondary modifier
 
 -- Launch Apps
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboard))
 hl.bind(secondMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(secondMod .. " + R", hl.dsp.exec_cmd(reload_waybar))
 
@@ -32,13 +34,19 @@ hl.bind(secondMod .. " + Q", hl.dsp.exec_cmd(shutdown_hyprland))
 
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(secondMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
+
+-- Move windows with secondMod + arrow keys
+hl.bind(secondMod .. " + left", hl.dsp.window.move({ direction = "left" }))
+hl.bind(secondMod .. " + right", hl.dsp.window.move({ direction = "right" }))
+hl.bind(secondMod .. " + up", hl.dsp.window.move({ direction = "up" }))
+hl.bind(secondMod .. " + down", hl.dsp.window.move({ direction = "down" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
