@@ -1,28 +1,19 @@
-# System Architecture
+## System Architecture
 
-OS:
-Arch Linux
+**OS:** Arch Linux
 
-Desktop:
-Hyprland
+**Desktop:** Hyprland
 
-Terminal:
-Kitty
+**Terminal:** Kitty
 
-Shell:
-Zsh + Zim + Starship
+**Shell:** Zsh + Zim + Starship
 
-File Manager:
-Thunar + Yazi
+**File Manager:** Thunar + Yazi
 
-Editor:
-Neovim + VS Code
+**Editor:** Neovim + VS Code
 
-Launcher:
-Rofi
+**Launcher:** Rofi
 
-Notifications:
-Dunst
+**Notifications:** Dunst
 
-Bar:
-Waybar
+**Status Bar:** Waybar
