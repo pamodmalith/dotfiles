@@ -114,7 +114,7 @@ source ${ZIM_HOME}/init.zsh
 [[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
 
 #Brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # fnm
 FNM_PATH="/home/pamod/.local/share/fnm"
