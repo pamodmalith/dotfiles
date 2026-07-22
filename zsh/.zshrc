@@ -111,7 +111,7 @@ source ${ZIM_HOME}/init.zsh
 
 # Source aliases if the file exists.
 # This file can contain your custom aliases for commands, making it easier to manage them separately from your main .zshrc file.
-[[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
+source ~/.aliases.zsh
 
 #Brew
 #eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
