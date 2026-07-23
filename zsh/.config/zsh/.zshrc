@@ -106,36 +106,9 @@ source ${ZIM_HOME}/init.zsh
 # }}} End configuration added by Zim Framework install
 
 # Source secrets if the file exists. 
-# This file can contain environment variables or other sensitive information that you don't want to include directly in your .zshrc.
 [[ -f ~/.secrets ]] && source ~/.secrets
 
-# Source aliases if the file exists.
-# This file can contain your custom aliases for commands, making it easier to manage them separately from your main .zshrc file.
-source ~/.aliases.zsh
-
-#Brew
-#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# fnm
-FNM_PATH="/home/pamod/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "$(fnm env --shell zsh)"
-fi
-
-#starship
-eval "$(starship init zsh)"
-
-# opencode
-export PATH=/home/pamod/.opencode/bin:$PATH
-
-# add fzf shell integration
-source <(fzf --zsh)
-
-# add zoxide
-eval "$(zoxide init zsh)"
-
-# chpwd hook
-chpwd(){
-  ls
-}
+# Source custom configurations
+source ~/aliases.zsh
+source ~/functions.zsh
+source ~/plugins.zsh
