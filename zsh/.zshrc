@@ -22,5 +22,8 @@ source ~/.config/zsh/plugins.zsh
 # Keybindings
 source ~/.config/zsh/keybindings.zsh
 
+# Options
+source ~/.config/zsh/options.zsh
+
 # Source secrets if the file exists. 
 [[ -f ~/.secrets ]] && source ~/.secrets
