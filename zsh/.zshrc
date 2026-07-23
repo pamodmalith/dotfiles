@@ -109,6 +109,6 @@ source ${ZIM_HOME}/init.zsh
 [[ -f ~/.secrets ]] && source ~/.secrets
 
 # Source custom configurations
-source ~/aliases.zsh
-source ~/functions.zsh
-source ~/plugins.zsh
+source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/functions.zsh
+source ~/.config/zsh/plugins.zsh
