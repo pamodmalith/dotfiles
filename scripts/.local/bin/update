@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "==> Checking internet connection..."
+
+if ! ping -c 1 archlinux.org >/dev/null 2>&1; then
+    echo "Error: No internet connection."
+    exit 1
+fi
+
+
+echo
+echo "==> Updating official packages..."
+
+sudo pacman -Syu
+
+
+echo
+echo "==> Updating AUR packages..."
+
+if command -v paru >/dev/null 2>&1; then
+    paru -Sua
+else
+    echo "paru is not installed. Skipping AUR updates."
+fi
+
+
+echo
+echo "==> Checking orphan packages..."
+
+orphans=$(pacman -Qtdq 2>/dev/null || true)
+
+if [[ -n "$orphans" ]]; then
+    echo
+    echo "Orphan packages found:"
+    echo "$orphans"
+    echo
+    echo "Review with:"
+    echo "sudo pacman -Rns $orphans"
+else
+    echo "No orphan packages found."
+fi
+
+
+echo
+echo "Update complete."
