@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+
+echo "==> Cleaning package cache..."
+
+if command -v paccache >/dev/null 2>&1; then
+    sudo paccache -r
+else
+    echo "paccache not found."
+    echo "Install pacman-contrib:"
+    echo "sudo pacman -S pacman-contrib"
+fi
+
+
+echo
+echo "==> Cleaning system journal..."
+
+sudo journalctl --vacuum-time=2weeks
+
+
+echo
+echo "==> Checking orphan packages..."
+
+orphans=$(pacman -Qtdq 2>/dev/null || true)
+
+if [[ -n "$orphans" ]]; then
+    echo
+    echo "Orphan packages found:"
+    echo "$orphans"
+    echo
+    echo "Remove manually with:"
+    echo "sudo pacman -Rns $orphans"
+else
+    echo "No orphan packages."
+fi
+
+
+echo
+echo "==> Cleaning user cache..."
+
+rm -rf ~/.cache/thumbnails/* 2>/dev/null || true
+
+
+echo
+echo "Cleanup complete."
