@@ -16,3 +16,7 @@ alias cat="bat --style=plain --paging=never"
 
 # Pomdoro TUI - focusd - github:BibekBhusal0
 alias pomo="focusd"
+
+# Pacman Aliases
+alias s="paru -s"
+alias i="paru -S"
