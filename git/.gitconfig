@@ -1,0 +1,19 @@
+[user]
+	name = Pamod Malith
+	email = dev.pamodmalith@gmail.com
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore_global
+
+[color]
+	ui = auto
+
+[push]
+	autoSetupRemote = true
+
+[pull]
+	rebase = false
