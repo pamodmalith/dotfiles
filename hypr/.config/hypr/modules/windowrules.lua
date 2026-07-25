@@ -2,11 +2,6 @@
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
 
--- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
--- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
-
--- Example window rules that are useful
-
 local suppressMaximizeRule = hl.window_rule({
     -- Ignore maximize requests from all apps. You'll probably like this.
     name           = "suppress-maximize-events",
@@ -46,4 +41,64 @@ hl.window_rule({
 
     move  = "20 monitor_h-120",
     float = true,
+})
+
+--------------------------------
+---- FLOATING WINDOWS ----
+--------------------------------
+
+-- Authentication dialogs
+hl.window_rule({
+    name = "polkit-dialog",
+    match = {
+        class = "polkit",
+    },
+    float = true,
+    center = true,
+})
+
+-- File picker dialogs
+hl.window_rule({
+    name = "file-dialog",
+    match = {
+        title = "Open File|Save File",
+    },
+    float = true,
+    center = true,
+    border_size = 1,
+    size = { 900, 700 },
+})
+
+-- Picture in Picture
+hl.window_rule({
+    name = "picture-in-picture",
+    match = {
+        title = "Picture-in-Picture",
+    },
+    float = true,
+    pin = true,
+})
+
+hl.window_rule({
+    name = "impala",
+    match = { class = "impala", },
+    float = true,
+    size = "600 500",
+    center = true
+})
+
+hl.window_rule({
+    name = "pavucontrol",
+    match = { class = "org.pulseaudio.pavucontrol", },
+    float = true,
+    size = "850 811",
+    center = true
+})
+
+hl.window_rule({
+    name = "blueman-manager",
+    match = { class = "blueman-manager", },
+    float = true,
+    size = "600 750",
+    center = true
 })

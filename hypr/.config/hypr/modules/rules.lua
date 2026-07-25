@@ -1,17 +1,48 @@
--- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
--- "Smart gaps" / "No gaps when only"
--- uncomment all if you wish to use that.
--- hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
--- hl.workspace_rule({ workspace = "f[1]",   gaps_out = 0, gaps_in = 0 })
--- hl.window_rule({
---     name  = "no-gaps-wtv1",
---     match = { float = false, workspace = "w[tv1]" },
---     border_size = 0,
---     rounding    = 0,
--- })
--- hl.window_rule({
---     name  = "no-gaps-f1",
---     match = { float = false, workspace = "f[1]" },
---     border_size = 0,
---     rounding    = 0,
--- })
+--------------------------------
+---- APPLICATION WORKSPACES ----
+--------------------------------
+
+-- Browser
+hl.window_rule({
+  name = "firefox-workspace",
+  match = {
+    class = "firefox",
+  },
+  workspace = 1,
+})
+
+-- Terminal
+hl.window_rule({
+  name = "kitty-workspace",
+  match = {
+    class = "kitty",
+  },
+  workspace = 2,
+})
+
+-- VS Code
+hl.window_rule({
+  name = "vscode-workspace",
+  match = {
+    class = "code",
+  },
+  workspace = 3,
+})
+
+-- Thunar
+hl.window_rule({
+  name = "thunar-workspace",
+  match = {
+    class = "thunar",
+  },
+  workspace = 4,
+})
+
+-- Telegram
+hl.window_rule({
+  name = "telegram-workspace",
+  match = {
+    class = "org.telegram.desktop",
+  },
+  workspace = 4,
+})
