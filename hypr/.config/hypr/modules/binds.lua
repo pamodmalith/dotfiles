@@ -12,6 +12,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(programs.browser))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(programs.launcher))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(programs.clipboard))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(programs.notification_center))
 hl.bind(secondMod .. " + SPACE", hl.dsp.exec_cmd(programs.menu))
 hl.bind(secondMod .. " + R", hl.dsp.exec_cmd(programs.reload_waybar))
 
