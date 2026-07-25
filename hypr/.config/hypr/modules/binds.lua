@@ -1,36 +1,23 @@
----------------------
----- MY PROGRAMS ----
----------------------
-
--- Programs to launch with keybinds. Change these to your preferred programs.
-local terminal          = "kitty"
-local fileManager       = "thunar"
-local browser           = "firefox"
-local launcher          = "rofi -show drun -show-icons"
-local menu              = "rofi -show run"
-local clipboard         = "rofi -modi clipboard:~/.local/bin/cliphist-rofi-img -show clipboard -show-icons"
-local reload_waybar     = "~/.config/hypr/scripts/waybar-reload.sh"
-local shutdown_hyprland = "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"
-
+local programs  = require("modules.programs")
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
 
-local mainMod           = "SUPER"         -- Sets "Windows" key as main modifier
-local secondMod         = "SUPER + SHIFT" -- Sets "Windows + Shift" as secondary modifier
+local mainMod   = "SUPER"         -- Sets "Windows" key as main modifier
+local secondMod = "SUPER + SHIFT" -- Sets "Windows + Shift" as secondary modifier
 
 -- Launch Apps
-hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(launcher))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboard))
-hl.bind(secondMod .. " + SPACE", hl.dsp.exec_cmd(menu))
-hl.bind(secondMod .. " + R", hl.dsp.exec_cmd(reload_waybar))
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(programs.terminal))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(programs.browser))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(programs.launcher))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(programs.clipboard))
+hl.bind(secondMod .. " + SPACE", hl.dsp.exec_cmd(programs.menu))
+hl.bind(secondMod .. " + R", hl.dsp.exec_cmd(programs.reload_waybar))
 
 -- Close window with mainMod + Q, exit Hyprland with secondMod + Q
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(secondMod .. " + Q", hl.dsp.exec_cmd(shutdown_hyprland))
+hl.bind(secondMod .. " + Q", hl.dsp.exec_cmd(programs.shutdown_hypr))
 
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
