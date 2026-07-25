@@ -1,0 +1,111 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+
+  "ignore-gtk-theme": true,
+
+  "positionX": "right",
+  "positionY": "top",
+
+  "layer": "overlay",
+  "control-center-layer": "top",
+
+  "layer-shell": true,
+  "layer-shell-cover-screen": true,
+
+  "cssPriority": "user",
+
+  "control-center-width": 420,
+  "control-center-height": 700,
+
+  "notification-window-width": 420,
+
+  "timeout": 6,
+  "timeout-low": 3,
+  "timeout-critical": 0,
+
+  "fit-to-screen": true,
+
+  "relative-timestamps": true,
+
+  "notification-grouping": true,
+
+  "transition-time": 200,
+
+  "keyboard-shortcuts": true,
+
+  "hide-on-clear": true,
+  "hide-on-action": true,
+
+  "text-empty": "No Notifications",
+
+  "widgets": [
+    "title",
+    "mpris",
+    "dnd",
+    "backlight",
+    "volume",
+    "buttons-grid",
+    "notifications"
+  ],
+
+  "widget-config": {
+    "title": {
+      "text": "Control Center",
+      "clear-all-button": true,
+      "button-text": "Clear"
+    },
+
+    "mpris": {
+      "blacklist": [],
+      "autohide": false,
+      "show-album-art": true,
+      "loop-carousel": false
+    },
+
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+
+    "backlight": {
+      "label": "Brightness"
+    },
+
+    "volume": {
+      "label": "Volume"
+    },
+
+    "notifications": {
+      "vexpand": true
+    },
+
+    "buttons-grid": {
+      "buttons-per-row": 4,
+
+      "actions": [
+        {
+          "label": "󰖩",
+          "type": "command",
+          "command": "kitty --class impala -e impala"
+        },
+
+        {
+          "label": "󰂯",
+          "type": "command",
+          "command": "blueman-manager"
+        },
+
+        {
+          "label": "󰌾",
+          "type": "command",
+          "command": "loginctl lock-session"
+        },
+
+        {
+          "label": "⏻",
+          "type": "command",
+          "command": "wlogout"
+        }
+      ]
+    }
+  }
+}

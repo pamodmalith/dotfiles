@@ -1,0 +1,80 @@
+@import "colors.css";
+
+* {
+  font-family: "FiraCode Nerd Font";
+  font-size: 14px;
+}
+
+.notification {
+  background: @base;
+  border-radius: 14px;
+  margin: 8px;
+  padding: 12px;
+}
+
+.notification-content {
+  color: @text;
+}
+
+.summary {
+  color: @blue;
+  font-weight: bold;
+}
+
+.body {
+  color: @subtext;
+}
+
+.control-center {
+  background: @base;
+  border-radius: 18px;
+  padding: 15px;
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.widget-title {
+  color: @mauve;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.widget-title button {
+  background: @red;
+  color: @text;
+  border-radius: 10px;
+}
+
+.widget {
+  background: @mantle;
+  border-radius: 14px;
+  padding: 12px;
+  margin: 8px;
+}
+
+
+button {
+  background: @mantle;
+  color: @text;
+  border-radius: 12px;
+}
+
+
+button:hover {
+  background: @blue;
+  color: @crust;
+}
+
+
+scale trough {
+  background: @crust;
+  border-radius: 10px;
+}
+
+
+scale highlight {
+  background: @blue;
+  border-radius: 10px;
+}
