@@ -97,7 +97,7 @@
         {
           "label": "󰌾",
           "type": "command",
-          "command": "loginctl lock-session"
+          "command": "hyprlock"
         },
 
         {
