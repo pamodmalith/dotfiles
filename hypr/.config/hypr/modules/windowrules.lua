@@ -102,3 +102,26 @@ hl.window_rule({
     size = "600 750",
     center = true
 })
+
+hl.on("window.title", function(w)
+    -- Wait until Firefox updates the window title to include "Bitwarden"
+    if w.class == "firefox" and string.find(w.title, "Bitwarden", nil, true) then
+        -- 1. Enable floating
+        hl.dispatch(
+            hl.dsp.window.float({ action = "enable", window = w })
+        )
+        -- 2. Apply your specific dimensions
+        hl.dispatch(
+            hl.dsp.window.resize({
+                x = 450,
+                y = 650,
+                relative = false,
+                window = w
+            })
+        )
+        -- 3. Center it on the screen
+        hl.dispatch(
+            hl.dsp.window.center({ window = w })
+        )
+    end
+end)
