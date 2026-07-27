@@ -79,6 +79,7 @@ hl.window_rule({
     pin = true,
 })
 
+-- Impala for managing wifi connections
 hl.window_rule({
     name = "impala",
     match = { class = "impala", },
@@ -87,6 +88,7 @@ hl.window_rule({
     center = true
 })
 
+-- Pavucontrol for volume control
 hl.window_rule({
     name = "pavucontrol",
     match = { class = "org.pulseaudio.pavucontrol", },
@@ -95,6 +97,7 @@ hl.window_rule({
     center = true
 })
 
+-- Blueman for bluetooth management
 hl.window_rule({
     name = "blueman-manager",
     match = { class = "blueman-manager", },
@@ -103,6 +106,7 @@ hl.window_rule({
     center = true
 })
 
+-- Bitwarden Extension in Firefox
 hl.on("window.title", function(w)
     -- Wait until Firefox updates the window title to include "Bitwarden"
     if w.class == "firefox" and string.find(w.title, "Bitwarden", nil, true) then
@@ -125,3 +129,11 @@ hl.on("window.title", function(w)
         )
     end
 end)
+
+hl.window_rule({
+    name = "mpv",
+    match = { class = "mpv" },
+    float = true,
+    size = "1280 720",
+    center = true
+})
