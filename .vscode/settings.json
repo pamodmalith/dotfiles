@@ -1,5 +1,30 @@
 {
-  "Lua.workspace.library": [
-    "/usr/share/hypr/stubs"
+  "Lua.workspace.library": ["/usr/share/hypr/stubs"],
+  "cSpell.words": [
+    "autofit",
+    "awww",
+    "Bitwarden",
+    "blueman",
+    "brightnessctl",
+    "cliphist",
+    "drun",
+    "hypr",
+    "hyprctl",
+    "hypridle",
+    "hyprlock",
+    "hyprpolkitagent",
+    "hyprshutdown",
+    "OLED",
+    "pavucontrol",
+    "playerctl",
+    "polkit",
+    "pulseaudio",
+    "rofi",
+    "swaync",
+    "thunar",
+    "togglesplit",
+    "waybar",
+    "windowrule",
+    "wpctl"
   ]
 }
