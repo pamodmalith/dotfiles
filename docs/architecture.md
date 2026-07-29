@@ -6,7 +6,7 @@
 
 **Terminal:** Kitty
 
-**Shell:** Zsh + Zim + Starship
+**Shell:** Zsh + Starship
 
 **File Manager:** Thunar + Yazi
 
