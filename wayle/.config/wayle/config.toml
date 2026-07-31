@@ -4,11 +4,11 @@ imports = []
 
 [general]
 font-sans = "Inter"
-font-mono = "JetBrains Mono"
+font-mono = "FiraCode Nerd Font"
 tearing-mode = false
 
 [bar]
-scale = 1.0
+scale = 0.75
 inset-edge = 0.0
 inset-ends = 0.0
 padding = 0.35
@@ -53,8 +53,8 @@ dropdown-freeze-label = true
 [[bar.layout]]
 monitor = "*"
 show = true
-left = ["media"]
-center = ["clock"]
+left = ["dashboard", "hyprland-workspaces"]
+center = ["notifications", "clock", "systray"]
 right = [
   "battery",
   "bluetooth",
@@ -646,8 +646,8 @@ button-bg-color = "bg-surface-elevated"
 left-click = "dropdown:audio"
 right-click = ""
 middle-click = "wayle audio output-mute"
-scroll-up = ""
-scroll-down = ""
+scroll-up = "wayle audio output-volume +5"
+scroll-down = "wayle audio output-volume -5"
 dropdown-app-icons = "mapped"
 thresholds = []
 
