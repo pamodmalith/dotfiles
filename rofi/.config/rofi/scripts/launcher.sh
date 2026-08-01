@@ -2,4 +2,7 @@
 
 rofi \
 -show drun \
--show-icons
+-show-icons \
+-modi drun,calc \
+--no-sort -disable-history \
+# -drun-categories "Game,Utility,Network,Office,Graphics,AudioVideo"
