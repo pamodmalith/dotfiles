@@ -6,10 +6,10 @@ Personal configuration files for **Pamod Malith** — an Arch Linux / Hyprland d
 
 | Component     | Choice                         |
 | ------------- | ------------------------------ |
-| OS            | Arch Linux                     |
+| OS            | [Arch Linux](https://archlinux.org/)                     |
 | Compositor    | [Hyprland](hypr/.config/hypr/) |
 | Shell         | Zsh (framework-free)           |
-| Prompt        | Starship                       |
+| Prompt        | [Starship](https://starship.rs/)                       |
 | Terminal      | Kitty                          |
 | Editor        | Neovim (LazyVim) + VS Code     |
 | Launcher      | Rofi (12 themes)               |
