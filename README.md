@@ -4,42 +4,45 @@ Personal configuration files for **Pamod Malith** — an Arch Linux / Hyprland d
 
 ## System Overview
 
-| Component     | Choice                         |
-| ------------- | ------------------------------ |
-| OS            | [Arch Linux](https://archlinux.org/)                     |
-| Compositor    | [Hyprland](hypr/.config/hypr/) |
-| Shell         | Zsh (framework-free)           |
-| Prompt        | [Starship](https://starship.rs/)                       |
-| Terminal      | Kitty                          |
-| Editor        | Neovim (LazyVim) + VS Code     |
-| Launcher      | Rofi (12 themes)               |
-| Bar           | Waybar                         |
-| Notifications | SwayNC                         |
-| Lock Screen   | hyprlock + hypridle            |
-| File Manager  | Thunar + Yazi                  |
-| Clipboard     | cliphist + wl-clip-persist     |
-| Video         | MPV                            |
+| Component     | Choice                                              |
+| ------------- | --------------------------------------------------- |
+| OS            | [Arch Linux](https://archlinux.org/)                |
+| Compositor    | [Hyprland](hypr/.config/hypr/)                      |
+| Shell         | Zsh (framework-free)                                |
+| Prompt        | [Starship](https://starship.rs/)                    |
+| Terminal      | Kitty                                               |
+| Editor        | Neovim (LazyVim) + VS Code                          |
+| Launcher      | Rofi (12 themes)                                    |
+| Bar           | [Wayle](wayle/.config/wayle/)                       |
+| Notifications | Wayle (built-in center)                             |
+| Lock Screen   | hyprlock + hypridle                                 |
+| Power Menu    | wlogout                                             |
+| PDF Viewer    | Zathura                                             |
+| File Manager  | Thunar + Yazi                                       |
+| Clipboard     | cliphist + wl-clip-persist                          |
+| Video         | MPV                                                 |
 
 ## Directory Structure
 
 ```
 dotfiles/
 ├── hypr/         — Hyprland compositor (Lua modules)
-├── waybar/       — Status bar
+├── wayle/        — Status panel + notification center
 ├── wlogout/      — Power menu
-├── swaync/       — Notification center
 ├── rofi/         — App launcher & menus
 ├── kitty/        — Terminal emulator
 ├── nvim/         — Neovim (LazyVim)
 ├── zsh/          — Shell config (modular)
 ├── starship/     — Prompt
 ├── mpv/          — Video player
+├── zathura/      — PDF viewer
 ├── git/          — Global git config
 ├── rclone/       — Backup automation (systemd timer)
 ├── opencode/     — AI coding assistant
 ├── scripts/      — System utilities (update, cleanup, extract)
 ├── docs/         — Architecture notes
-└── .vscode/      — Editor settings
+├── .vscode/      — Editor settings
+└── archive/      — Retired configs (waybar, swaync)
 ```
 
 Every config follows the `~/.config/<app>/` XDG convention. Apply with `stow` or manual symlinks.
@@ -48,19 +51,19 @@ Every config follows the `~/.config/<app>/` XDG convention. Apply with `stow` or
 
 Modular Lua configuration split into single-purpose files:
 
-| Module            | Purpose                                                      |
-| ----------------- | ------------------------------------------------------------ |
-| `monitors.lua`    | eDP-1 laptop + HDMI-A-1 external display                     |
-| `autostart.lua`   | Launches waybar, swaync, cliphist, hypridle, hyprpolkitagent |
-| `binds.lua`       | Keybindings (`Super` + key combos)                           |
-| `decorations.lua` | Gaps, borders, shadows, blur, animations                     |
-| `env.lua`         | Wayland environment variables                                |
-| `input.lua`       | Keyboard layout (US), touchpad, gestures                     |
-| `layout.lua`      | Dwindle, Master, Scrolling layouts                           |
-| `misc.lua`        | Misc settings                                                |
-| `programs.lua`    | Central app path definitions                                 |
-| `rules.lua`       | Workspace assignments                                        |
-| `windowrules.lua` | Floating rules for dialogs, PIP, media apps                  |
+| Module            | Purpose                                                       |
+| ----------------- | ------------------------------------------------------------- |
+| `monitors.lua`    | eDP-1 laptop + HDMI-A-1 external display                      |
+| `autostart.lua`   | Launches wayle, awww-daemon, cliphist, hypridle, polkit agent |
+| `binds.lua`       | Keybindings (`Super` + key combos)                            |
+| `decorations.lua` | Gaps, borders, shadows, blur, animations                      |
+| `env.lua`         | Wayland environment variables                                 |
+| `input.lua`       | Keyboard layout (US), touchpad, gestures                      |
+| `layout.lua`      | Dwindle, Master, Scrolling layouts                            |
+| `misc.lua`        | Misc settings                                                 |
+| `programs.lua`    | Central app path definitions                                  |
+| `rules.lua`       | Workspace assignments                                         |
+| `windowrules.lua` | Floating rules for dialogs, PIP, media apps                   |
 
 ### Screenshots
 
@@ -72,6 +75,18 @@ Four capture methods via `hypr/.config/hypr/scripts/`:
 - `screenshot-window.sh` — Active window
 
 All save to `~/Pictures/Screenshots/` and copy to clipboard.
+
+## Wayle
+
+Wayle replaced both Waybar and SwayNC (now under `archive/`) as the single status bar and notification solution. TOML-based config with runtime theme switching:
+
+- Top bar with button groups: dashboard, workspaces, notifications, clock, systray, battery, bluetooth, network, mic, volume
+- Integrated notification center with popups, Do Not Disturb, and action buttons
+- Dropdown panels for audio, network, bluetooth, calendar, weather, media, and a system dashboard (lock/logout/reboot/poweroff)
+- Built-in OSD and wallpaper engine
+- Theme provider supporting manual palettes plus Matugen, Wallust, and Pywal generation
+
+Custom palette in `config.toml` (`[styling.palette]`); per-theme palettes validated against `themes/schema.json`.
 
 ## Rofi
 
@@ -85,19 +100,6 @@ All save to `~/Pictures/Screenshots/` and copy to clipboard.
 
 The active theme is set in `main.rasi`.
 
-## Waybar
-
-Glass-morphism dark bar with pill-shaped modules. Power button launches wlogout.
-
-## SwayNC
-
-Notification center with Catppuccin Mocha theming. Features:
-
-- MPRIS media controls
-- Do Not Disturb toggle
-- Backlight & volume sliders
-- Quick action buttons grid
-
 ## Zsh
 
 Framework-free modular config in `zsh/.config/zsh/`:
@@ -110,7 +112,7 @@ Framework-free modular config in `zsh/.config/zsh/`:
 | `functions.zsh`   | `mkcd`, auto-`ls` on dir change                                          |
 | `keybindings.zsh` | Emacs mode, word movement, history search                                |
 | `options.zsh`     | History (10k lines, share, dedup)                                        |
-| `plugins.zsh`     | Starship, zoxide, fzf, fnm, SDKMAN, autosuggestions, syntax highlighting |
+| `plugins.zsh`     | Starship, zoxide, fzf, fnm, autosuggestions, syntax highlighting         |
 
 ## Scripts
 
@@ -141,17 +143,20 @@ See [rclone/README.md](rclone/README.md) for setup instructions.
 
 ## Color Palette
 
-Catppuccin Mocha inspired:
+Custom dark palette (`#141420` base) inspired by Catppuccin Mocha:
 
-| Token  | Hex       |
-| ------ | --------- |
-| Base   | `#1e1e2e` |
-| Text   | `#cdd6f4` |
-| Blue   | `#89b4fa` |
-| Mauve  | `#cba6f7` |
-| Red    | `#f38ba8` |
-| Green  | `#a6e3a1` |
-| Yellow | `#f9e2af` |
+| Token      | Hex       |
+| ---------- | --------- |
+| Base       | `#141420` |
+| Surface    | `#1c1c2c` |
+| Elevated   | `#262638` |
+| Foreground | `#d4d6e8` |
+| Muted      | `#8a8ca4` |
+| Primary    | `#e0947a` |
+| Red        | `#e46870` |
+| Yellow     | `#e0b870` |
+| Green      | `#68c898` |
+| Blue       | `#78a0e0` |
 
 ## License
 

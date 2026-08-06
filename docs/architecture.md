@@ -14,6 +14,10 @@
 
 **Launcher:** Rofi
 
-**Notifications:** Dunst
+**Notifications:** Wayle
 
-**Status Bar:** Waybar
+**Status Bar:** Wayle
+
+**Power Menu:** wlogout
+
+**PDF Viewer:** Zathura
