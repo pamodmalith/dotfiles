@@ -10,6 +10,7 @@
     "drun",
     "hypr",
     "hyprctl",
+    "HYPRCURSOR",
     "hypridle",
     "hyprlock",
     "hyprpolkitagent",
@@ -17,6 +18,7 @@
     "matugen",
     "OLED",
     "pavucontrol",
+    "PLATFORMTHEME",
     "playerctl",
     "polkit",
     "pulseaudio",
@@ -25,10 +27,13 @@
     "swaync",
     "thunar",
     "togglesplit",
+    "VIDEODRIVER",
     "wallust",
     "waybar",
     "Wayle",
+    "WINDOWDECORATION",
     "windowrule",
-    "wpctl"
+    "wpctl",
+    "XCURSOR"
   ]
 }
