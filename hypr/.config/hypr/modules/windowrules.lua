@@ -137,3 +137,33 @@ hl.window_rule({
     size = "1280 720",
     center = true
 })
+
+
+-- Steam overlay
+-- Fix Steam pop-ups and child windows
+hl.window_rule({
+    name = "steam-special-offers-float",
+    match = {
+        class = "^(steam)$",
+        title = "^(Special Offers)$"
+    },
+    float = true
+})
+
+hl.window_rule({
+    name = "steam-friends-float",
+    match = {
+        class = "^(steam)$",
+        title = "^(Friends List)$"
+    },
+    float = true
+})
+
+hl.window_rule({
+    name = "steam-news-float",
+    match = {
+        class = "^(steam)$",
+        title = "^(Steam - News)$"
+    },
+    float = true
+})
