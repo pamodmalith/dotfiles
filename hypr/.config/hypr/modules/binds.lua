@@ -15,7 +15,8 @@ hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(programs.clipboard))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(programs.notification_center))
 hl.bind(secondMod .. " + SPACE", hl.dsp.exec_cmd(programs.menu))
 hl.bind(secondMod .. " + S", hl.dsp.exec_cmd(programs.screenshot_region))
-hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd(programs.screenshot_monitor))
+hl.bind("PRINT", hl.dsp.exec_cmd(programs.screenshot_monitor))
+hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd(programs.screenshot_menu))
 hl.bind(secondMod .. " + R", hl.dsp.exec_cmd(programs.reload_waybar))
 
 -- Close window with mainMod + Q, exit Hyprland with secondMod + Q
