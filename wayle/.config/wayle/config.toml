@@ -54,7 +54,7 @@ dropdown-freeze-label = true
 monitor = "*"
 show = true
 left = ["dashboard", "hyprland-workspaces"]
-center = ["notifications", "clock", "systray"]
+center = ["notifications", "clock", "cava", "systray"]
 right = [
   "battery",
   "bluetooth",
