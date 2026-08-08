@@ -11,11 +11,11 @@ case "$CHOICE" in
     "1. Region")
         ~/.config/hypr/scripts/screenshot-region.sh
         ;;
-    "2. Active Monitor")
-        sleep 0.3 && ~/.config/hypr/scripts/screenshot-monitor.sh
-        ;;
-    "3. Full Screen")
+    "2. Full Screen")
         sleep 0.3 && ~/.config/hypr/scripts/screenshot-full.sh
+        ;;
+    "3. Active Monitor")
+        sleep 0.3 && ~/.config/hypr/scripts/screenshot-monitor.sh
         ;;
     "4. Active Window")
         sleep 0.3 && ~/.config/hypr/scripts/screenshot-window.sh
