@@ -46,3 +46,12 @@ hl.window_rule({
   },
   workspace = 4,
 })
+
+-- Vesktop
+hl.window_rule({
+  name = "vesktop-workspace",
+  match = {
+    class = "vesktop",
+  },
+  workspace = 5,
+})
