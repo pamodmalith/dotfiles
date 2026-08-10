@@ -53,5 +53,5 @@ hl.window_rule({
   match = {
     class = "vesktop",
   },
-  workspace = 10,
+  workspace = 8,
 })
