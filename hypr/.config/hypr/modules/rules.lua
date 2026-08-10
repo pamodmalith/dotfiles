@@ -44,7 +44,7 @@ hl.window_rule({
   match = {
     class = "org.telegram.desktop",
   },
-  workspace = 4,
+  workspace = 5,
 })
 
 -- Vesktop
@@ -53,5 +53,5 @@ hl.window_rule({
   match = {
     class = "vesktop",
   },
-  workspace = 5,
+  workspace = 10,
 })
