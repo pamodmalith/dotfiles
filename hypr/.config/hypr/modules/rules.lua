@@ -55,3 +55,12 @@ hl.window_rule({
   },
   workspace = 8,
 })
+
+-- Steam
+hl.window_rule({
+  name = "steam-workspace",
+  match = {
+    class = "steam",
+  },
+  workspace = 9,
+})
