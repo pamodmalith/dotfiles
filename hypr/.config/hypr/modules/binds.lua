@@ -21,7 +21,7 @@ hl.bind(secondMod .. " + R", hl.dsp.exec_cmd(programs.reload_waybar))
 
 -- Close window with mainMod + Q, exit Hyprland with secondMod + Q
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(secondMod .. " + Q", hl.dsp.exec_cmd(programs.shutdown_hypr))
+-- hl.bind(secondMod .. " + Q", hl.dsp.exec_cmd(programs.shutdown_hypr))
 
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
