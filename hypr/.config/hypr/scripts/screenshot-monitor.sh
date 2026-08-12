@@ -7,7 +7,7 @@ MONITOR=$(hyprctl monitors -j | jq -r '.[] | select(.focused==true) | .name')
 
 if grim -o "$MONITOR" "$FILE"; then
     wl-copy < "$FILE"
-    notify-send "Screenshot saved" "$FILE"
+    notify-send -a "Grim" -u normal "Screenshot saved" "$FILE"
 else
-    notify-send "Error" "Failed to capture monitor"
+    notify-send -a "Grim" -u critical "Error" "Failed to capture monitor"
 fi

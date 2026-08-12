@@ -8,7 +8,7 @@ FILE="$DIR/$(date +'%Y-%m-%d_%H-%M-%S').png"
 
 if grim -g "$(slurp)" "$FILE"; then
     wl-copy < "$FILE"
-    notify-send "Screenshot saved" "$FILE"
+    notify-send -a "Grim" -u normal "Screenshot saved" "$FILE"
 else
-    notify-send "Error" "Failed to capture screenshot"
+    notify-send -a "Grim" -u critical "Error" "Failed to capture screenshot"
 fi
