@@ -106,27 +106,21 @@ hl.window_rule({
     center = true
 })
 
--- Bitwarden Extension in Firefox
+-- Handle Firefox popups that change their title dynamically (Bitwarden, Google Auth, etc.)
 hl.on("window.title", function(w)
-    -- Wait until Firefox updates the window title to include "Bitwarden"
-    if w.class == "firefox" and string.find(w.title, "Bitwarden", nil, true) then
-        -- 1. Enable floating
-        hl.dispatch(
-            hl.dsp.window.float({ action = "enable", window = w })
-        )
-        -- 2. Apply your specific dimensions
-        hl.dispatch(
-            hl.dsp.window.resize({
-                x = 450,
-                y = 650,
-                relative = false,
-                window = w
-            })
-        )
-        -- 3. Center it on the screen
-        hl.dispatch(
-            hl.dsp.window.center({ window = w })
-        )
+    if w.class == "firefox" then
+        -- 1. Check for Bitwarden
+        if string.find(w.title, "Bitwarden", nil, true) then
+            hl.dispatch(hl.dsp.window.float({ action = "enable", window = w }))
+            hl.dispatch(hl.dsp.window.resize({ x = 450, y = 650, relative = false, window = w }))
+            hl.dispatch(hl.dsp.window.center({ window = w }))
+
+            -- 2. Check for Google Sign-in popups
+        elseif string.find(w.title, "Sign in – Google accounts", nil, true) then
+            hl.dispatch(hl.dsp.window.float({ action = "enable", window = w }))
+            hl.dispatch(hl.dsp.window.resize({ x = 500, y = 650, relative = false, window = w }))
+            hl.dispatch(hl.dsp.window.center({ window = w }))
+        end
     end
 end)
 
