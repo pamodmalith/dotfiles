@@ -47,6 +47,15 @@ hl.window_rule({
   workspace = 5,
 })
 
+-- Spotify
+hl.window_rule({
+  name = "spotify-workspace",
+  match = {
+    class = "Spotify",
+  },
+  workspace = 7,
+})
+
 -- Vesktop
 hl.window_rule({
   name = "vesktop-workspace",
