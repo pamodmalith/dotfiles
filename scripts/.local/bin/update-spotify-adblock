@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "Fetching latest Spotify adblock configuration..."
+
+# Check if sudo is available
+if ! command -v sudo &> /dev/null; then
+  echo "Error: sudo command not found." >&2
+  exit 1
+fi
+
+# Check if target directory exists
+if [[ ! -d /etc/spotify-adblock ]]; then
+  echo "Error: /etc/spotify-adblock directory not found." >&2
+  exit 1
+fi
+
+# Fetch and update configuration
+if curl -fsSL https://raw.githubusercontent.com/abba23/spotify-adblock/main/config.toml | sudo tee /etc/spotify-adblock/config.toml > /dev/null 2>&1; then
+  echo "Success! Configuration updated."
+else
+  echo "Error: Failed to update configuration." >&2
+  exit 1
+fi
