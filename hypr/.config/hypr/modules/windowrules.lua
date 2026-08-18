@@ -106,6 +106,18 @@ hl.window_rule({
     center = true
 })
 
+-- hl.window_rule({
+--     name = "telegram-media-viewer",
+--     match = {
+--         class = "org.telegram.desktop",
+--         title = "Media viewer",
+--     },
+--     workspace = 5,
+--     float = true,
+--     center = true,
+--     -- suppress_event = "fullscreen", -- Stops Telegram from hijacking the monitor placement
+-- })
+
 -- Handle Firefox popups that change their title dynamically (Bitwarden, Google Auth, etc.)
 hl.on("window.title", function(w)
     if w.class == "firefox" then
