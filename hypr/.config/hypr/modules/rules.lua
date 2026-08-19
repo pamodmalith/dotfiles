@@ -62,7 +62,7 @@ hl.window_rule({
   match = {
     class = "vesktop",
   },
-  workspace = 8,
+  workspace = 9,
 })
 
 -- Steam
@@ -71,5 +71,5 @@ hl.window_rule({
   match = {
     class = "steam",
   },
-  workspace = 9,
+  workspace = 10,
 })
