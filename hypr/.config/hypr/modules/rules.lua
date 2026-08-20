@@ -56,6 +56,15 @@ hl.window_rule({
   workspace = 7,
 })
 
+-- OBS
+hl.window_rule({
+  name = "obs-workspace",
+  match = {
+    class = "com.obsproject.Studio",
+  },
+  workspace = 8,
+})
+
 -- Vesktop
 hl.window_rule({
   name = "vesktop-workspace",
