@@ -29,6 +29,15 @@ hl.window_rule({
   workspace = 3,
 })
 
+-- Intellij IDEA
+hl.window_rule({
+  name = "intellij-workspace",
+  match = {
+    class = "jetbrains-idea",
+  },
+  workspace = 3,
+})
+
 -- Thunar
 hl.window_rule({
   name = "thunar-workspace",
