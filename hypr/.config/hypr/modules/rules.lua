@@ -42,7 +42,8 @@ hl.window_rule({
 hl.window_rule({
   name = "netbeans-workspace",
   match = {
-    class = "Apache NetBeans IDE *",
+    class = "Apache NetBeans IDE 30",
+    title = "Apache NetBeans IDE 30",
   },
   workspace = 3,
 })
