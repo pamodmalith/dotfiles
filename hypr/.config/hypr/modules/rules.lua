@@ -38,6 +38,15 @@ hl.window_rule({
   workspace = 3,
 })
 
+-- Netbeans
+hl.window_rule({
+  name = "netbeans-workspace",
+  match = {
+    class = "Apache NetBeans IDE *",
+  },
+  workspace = 3,
+})
+
 -- Thunar
 hl.window_rule({
   name = "thunar-workspace",
