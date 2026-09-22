@@ -1,11 +1,23 @@
 -- Cachy colors
 
-CACHYLGREEN = "rgba(82dcccff)"
-CACHYMGREEN = "rgba(00aa84ff)"
-CACHYDGREEN = "rgba(007d6fff)"
-CACHYLBLUE  = "rgba(01ccffff)"
-CACHYMBLUE  = "rgba(182545ff)"
-CACHYDBLUE  = "rgba(111826ff)"
-CACHYWHITE  = "rgba(ffffffff)"
-CACHYGREY   = "rgba(ddddddff)"
-CACHYGRAY   = "rgba(798bb2ff)"
+local CACHYLGREEN = "rgba(82dcccff)"
+local CACHYMGREEN = "rgba(00aa84ff)"
+local CACHYDGREEN = "rgba(007d6fff)"
+local CACHYLBLUE  = "rgba(01ccffff)"
+local CACHYMBLUE  = "rgba(182545ff)"
+local CACHYDBLUE  = "rgba(111826ff)"
+local CACHYWHITE  = "rgba(ffffffff)"
+local CACHYGREY   = "rgba(ddddddff)"
+local CACHYGRAY   = "rgba(798bb2ff)"
+
+return {
+	CACHYLGREEN = CACHYLGREEN,
+	CACHYMGREEN = CACHYMGREEN,
+	CACHYDGREEN = CACHYDGREEN,
+	CACHYLBLUE = CACHYLBLUE,
+	CACHYMBLUE = CACHYMBLUE,
+	CACHYDBLUE = CACHYDBLUE,
+	CACHYWHITE = CACHYWHITE,
+	CACHYGREY = CACHYGREY,
+	CACHYGRAY = CACHYGRAY,
+}
