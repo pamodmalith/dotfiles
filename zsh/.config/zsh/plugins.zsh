@@ -1,30 +1,58 @@
 # ==========================
 # Zsh Plugins
 # ==========================
+#
+# Every integration is guarded: if the tool/plugin isn't installed the line is
+# skipped instead of erroring. See README "Required tools" for install commands.
 
-# Starship prompt
-eval "$(starship init zsh)"
+# --- Starship prompt ---
+#   Required tool: starship  ->  eval "$(starship init zsh)"
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
 
-# zoxide
-eval "$(zoxide init zsh)"
+# --- zoxide (smart cd) ---
+#   Required tool: zoxide  ->  eval "$(zoxide init zsh)"
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
 
-# fzf integration
-source <(fzf --zsh)
+# --- fzf (fuzzy finder + Ctrl-R / Ctrl-T) ---
+#   Required tool: fzf  ->  source <(fzf --zsh)
+#   2>/dev/null: fzf's key-bindings emits "can't change option: zle" in
+#   non-TTY interactive shells (IDE panels, piped stdin); harmless, silenced.
+if command -v fzf >/dev/null 2>&1; then
+  source <(fzf --zsh) 2>/dev/null
+fi
 
-# fnm
-eval "$(fnm env --use-on-cd --shell zsh)"
+# --- mise (dev runtime versions: node, python, ...) ---
+#   Required tool: mise  ->  eval "$(mise activate zsh)"
+#   Replaces fnm: manages node + other toolchains and switches versions
+#   automatically when you cd into a directory with .mise.toml/.tool-versions.
+#   (Registers a chpwd hook; coexists with the auto-`ls` chpwd hook.)
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
 
-# SDKMAN
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# --- zsh-autosuggestions (grey ghost-text suggestions) ---
+#   Required package: zsh-autosuggestions
+#   -> source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+  ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+  ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
-# Autosuggestions
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# --- zsh-syntax-highlighting (colors commands as you type) ---
+#   Required package: zsh-syntax-highlighting (load after autosuggestions)
+#   -> source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
-# Syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# History substring search
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+# --- zsh-history-substring-search (arrows match what you typed) ---
+#   Required package: zsh-history-substring-search
+#   -> source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+if [[ -f /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh ]]; then
+  source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+fi
