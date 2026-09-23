@@ -1,6 +1,4 @@
 autoload -U compinit
-autoload -U history-substring-search-up
-autoload -U history-substring-search-down
 
 # Emacs style keybindings (v for vi mode, e for emacs mode)
 bindkey -e
@@ -9,13 +7,17 @@ bindkey -e
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
 
-# Bind Up and Down arrow keys
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+# History substring search — only if the plugin's widgets are available
+# (loaded by plugins.zsh, which is sourced before this file)
+if (( ${+widgets[history-substring-search-up]} && ${+widgets[history-substring-search-down]} )); then
+  # Bind Up and Down arrow keys
+  bindkey '^[[A' history-substring-search-up
+  bindkey '^[[B' history-substring-search-down
 
-# Bind Ctrl+P and Ctrl+N to history search
-bindkey '^P' history-substring-search-up
-bindkey '^N' history-substring-search-down
+  # Bind Ctrl+P and Ctrl+N to history search
+  bindkey '^P' history-substring-search-up
+  bindkey '^N' history-substring-search-down
+fi
 
 # Delete character under cursor
 bindkey '^[[3~' delete-char
