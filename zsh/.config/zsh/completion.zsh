@@ -23,4 +23,4 @@ zstyle ':completion:*:default' list-colors "${(s.:.):-di=1;34:ln=35:so=32:pi=33:
 # Case insensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-autoload -Uz compinit && compinit
+compinit

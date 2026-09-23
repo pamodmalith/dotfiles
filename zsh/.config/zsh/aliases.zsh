@@ -2,9 +2,6 @@
 # Beautiful Modern Aliases
 # -------------------------
 
-# Make 'ls' use eza with Nerd Font icons
-alias ls="eza --icons=always"
-
 # Make 'll' show a detailed list with icons and git status
 alias ll="eza -l --icons=always --git"
 
@@ -13,9 +10,6 @@ alias la="eza -la --icons=always"
 
 # Make 'cat' use bat (with syntax highlighting but no annoying paging)
 alias cat="bat --style=plain --paging=never"
-
-# Pomdoro TUI - focusd - github:BibekBhusal0
-alias pomo="focusd"
 
 # Pacman Aliases
 alias s="paru -s"
