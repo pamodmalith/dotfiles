@@ -1,4 +1,4 @@
-local vars = require("config.variables")
+local vars = require("modules.variables")
 
 -- Window rules wiki https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 

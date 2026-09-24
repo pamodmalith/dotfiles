@@ -1,4 +1,4 @@
-local colors = require("config.colors")
+local colors = require("modules.colors")
 
 -- Look and feel configuration
 

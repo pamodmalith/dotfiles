@@ -2,7 +2,7 @@
 ----  MISC  ----
 ----------------
 
-local colors = require("config.colors")
+local colors = require("modules.colors")
 
 hl.config({
     ecosystem = {

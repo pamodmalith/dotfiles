@@ -1,4 +1,4 @@
-local vars = require("config.variables")
+local vars = require("modules.variables")
 local mainMod = "SUPER"
 local secondMod = mainMod .. " + SHIFT"
 local noctCall = "noctalia msg "
