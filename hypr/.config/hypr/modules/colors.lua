@@ -1,23 +1,15 @@
--- Cachy colors
+-- Cachy color palette
 
-local CACHYLGREEN = "rgba(82dcccff)"
-local CACHYMGREEN = "rgba(00aa84ff)"
-local CACHYDGREEN = "rgba(007d6fff)"
-local CACHYLBLUE  = "rgba(01ccffff)"
-local CACHYMBLUE  = "rgba(182545ff)"
-local CACHYDBLUE  = "rgba(111826ff)"
-local CACHYWHITE  = "rgba(ffffffff)"
-local CACHYGREY   = "rgba(ddddddff)"
-local CACHYGRAY   = "rgba(798bb2ff)"
+local M = {}
 
-return {
-	CACHYLGREEN = CACHYLGREEN,
-	CACHYMGREEN = CACHYMGREEN,
-	CACHYDGREEN = CACHYDGREEN,
-	CACHYLBLUE = CACHYLBLUE,
-	CACHYMBLUE = CACHYMBLUE,
-	CACHYDBLUE = CACHYDBLUE,
-	CACHYWHITE = CACHYWHITE,
-	CACHYGREY = CACHYGREY,
-	CACHYGRAY = CACHYGRAY,
-}
+M.green_light  = "rgba(82dcccff)"
+M.green_medium = "rgba(00aa84ff)"
+M.green_dark   = "rgba(007d6fff)"
+M.blue_light   = "rgba(01ccffff)"
+M.blue_medium  = "rgba(182545ff)"
+M.blue_dark    = "rgba(111826ff)"
+M.white        = "rgba(ffffffff)"
+M.grey_light   = "rgba(ddddddff)"
+M.grey         = "rgba(798bb2ff)"
+
+return M

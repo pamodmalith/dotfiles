@@ -2,9 +2,28 @@
 ----  MISC  ----
 ----------------
 
+local colors = require("config.colors")
+
 hl.config({
+    ecosystem = {
+        no_update_news = true,
+        no_donation_nag = true,
+    },
     misc = {
-        force_default_wallpaper = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
+        col = {
+            splash = colors.green_light,
+        },
+        middle_click_paste = false,
+        enable_swallow = true,
+        swallow_regex = "(kitty|ghostty|[Kk]onsole|Alacritty|gnome-terminal|xfce[0-9]?-terminal)",
+        vrr = 3,
+    },
+    render = {
+        direct_scanout = 2,
+        -- Use the option below if you find games constantly black screening for a couple seconds whenever direct scanout enables/disables
+        -- non_shader_cm = 0,
+    },
+    xwayland = {
+        force_zero_scaling = true
     },
 })

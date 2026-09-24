@@ -1,6 +1,6 @@
--- Look and feel configuration
+local colors = require("config.colors")
 
-local colors = require("modules.colors")
+-- Look and feel configuration
 
 hl.config({
     general = {
@@ -11,25 +11,25 @@ hl.config({
         resize_on_border = true,
         col = {
             active_border = {
-                colors = { colors.CACHYLGREEN, colors.CACHYDGREEN },
+                colors = { colors.green_light, colors.green_dark },
                 angle = 45,
             },
-            inactive_border = colors.CACHYGRAY,
+            inactive_border = colors.grey,
         },
     },
     group = {
         col = {
-            border_active = colors.CACHYLBLUE,
-            border_inactive = colors.CACHYGRAY,
-            border_locked_active = colors.CACHYDBLUE,
-            border_locked_inactive = colors.CACHYGRAY,
+            border_active = colors.blue_light,
+            border_inactive = colors.grey,
+            border_locked_active = colors.blue_dark,
+            border_locked_inactive = colors.grey,
         },
         groupbar = {
             col = {
-                active = colors.CACHYLGREEN,
-                inactive = colors.CACHYGRAY,
-                locked_active = colors.CACHYDBLUE,
-                locked_inactive = colors.CACHYGRAY,
+                active = colors.green_light,
+                inactive = colors.grey,
+                locked_active = colors.blue_dark,
+                locked_inactive = colors.grey,
             },
         },
     },
