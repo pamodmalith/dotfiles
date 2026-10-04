@@ -8,6 +8,11 @@ export HYPRCURSOR_SIZE=24
 export XCURSOR_THEME="Bibata-Modern-Ice"
 export XCURSOR_SIZE=24
 
+# Enforce XCompose fallback rules across GTK and Qt frameworks
+export GTK_IM_MODULE="xim"
+export QT_IM_MODULE="xim"
+export XCOMPOSEFILE="$HOME/.XCompose"
+
 # If you have an NVIDIA GPU uncommment the following lines
 # export GBM_BACKEND=nvidia-drm # force GBM as a backend
 # export __GLX_VENDOR_LIBRARY_NAME=nvidia # force GBM as a backend
