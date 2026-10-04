@@ -1,0 +1,16 @@
+# Include standard system-wide sequences
+include "%L"
+
+# Your custom maps
+<Multi_key> <g> <g>              : "λ"   # Greek lambda
+<Multi_key> <less> <three>       : "❤️"  # Heart emoji
+<Multi_key> <minus> <minus> <greater> : "⟶"
+<Multi_key> <asciitilde> <equal> : "≈"
+<Multi_key> <asciitilde> <asciitilde> : "≈"
+
+
+<Multi_key> <space> <n> : "Pamod Malith"
+<Multi_key> <space> <i> : "200600504555"
+<Multi_key> <space> <p> : "0774046363"
+<Multi_key> <space> <m> <p> : "pamodmalith@gmail.com"
+<Multi_key> <space> <m> <d> : "dev.pamodmalith@gmail.com"
