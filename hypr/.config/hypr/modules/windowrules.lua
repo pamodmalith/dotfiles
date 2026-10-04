@@ -160,3 +160,13 @@ hl.window_rule({
     size = "1280 720",
     center = true
 })
+
+-- Zathura
+hl.window_rule({
+    name = "Zathura",
+    match = {
+        class = "org.pwmt.zathura"
+    },
+    float = true,
+    center = true
+})
