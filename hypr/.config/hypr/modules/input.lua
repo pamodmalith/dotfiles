@@ -9,6 +9,8 @@ hl.config({
         touchpad     = {
             natural_scroll = true,
         },
+        -- If editing input.lua (Lua syntax)
+        kb_options = "compose:ralt,"
     },
     -- Uncomment the section below to enable software cursors; this can help with cursor display or behavior issues
     -- cursor = {
