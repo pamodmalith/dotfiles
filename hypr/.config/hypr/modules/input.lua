@@ -12,10 +12,12 @@ hl.config({
         -- If editing input.lua (Lua syntax)
         kb_options = "compose:ralt,"
     },
-    -- Uncomment the section below to enable software cursors; this can help with cursor display or behavior issues
-    -- cursor = {
-    --     no_hardware_cursors = 1,
-    -- },
+    -- Software cursors enabled as a workaround for the compositor memory leak on
+    -- mouse movement over the external HDMI monitor (see hyprwm/Hyprland#10918).
+    -- If a future Hyprland release fixes the leak, this can be commented out again.
+    cursor = {
+        no_hardware_cursors = 1,
+    },
 })
 
 hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
