@@ -1,0 +1,12 @@
+# ==============================================================================
+# Outputs
+# Outputs are machine-specific. Run `umbriel outputs` to find names and modes.
+# https://docs.noctalia.dev/umbriel/outputs/
+#
+# [output.DP-1]
+# mode = "2560x1440@144"
+# position = [0, 0]
+# scale = 1.25
+# vrr = "fullscreen"
+# hdr = "auto"
+# sdr_transfer = "gamma22" # Or "srgb" for piecewise SDR decoding in HDR.

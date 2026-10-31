@@ -1,0 +1,22 @@
+# ==============================================================================
+# Appearance
+# Blur uses a smaller radius than the built-in default.
+# https://docs.noctalia.dev/umbriel/appearance/
+#
+[appearance.blur]
+radius = 3
+
+# Optional title bar with modifier-free dragging and floating frame resizing.
+# [appearance.title_bar]
+# mode = "on" # Follow client decoration preferences.
+# Use "negotiated" to hide bars on Wayland windows that do not negotiate decorations.
+# Use "forced" to always show bars, or "off" to hide them. Window rules can override this.
+# height = 28
+# font = "sans 10"
+# button_position = "right" # or "left"
+# buttons = ["minimize", "maximize", "close"] # From the title outward; leave one out to hide it.
+# button_corner_radius = -1 # Follow the window's corner_radius; 0 makes square buttons.
+
+# Choose the background color shown if the lock screen takes too long to appear.
+# [colors]
+# backdrop = "#000000FF"
