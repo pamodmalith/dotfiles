@@ -1,46 +1,43 @@
 # ==============================================================================
-# Includes
-
-# Optional split configuration
-# https://docs.noctalia.dev/umbriel/configuration/#include
-[include]
-files = []
-
-[include.optional]
-files = []
-
-# ==============================================================================
 # General
-# Optional session examples. XWayland support is enabled by default.
 # https://docs.noctalia.dev/umbriel/configuration/#general
 #
 [general]
-autostart = ["noctalia"]
-# xwayland = false
+show_cheatsheet = false
+autostart = ["noctalia", "xhost +SI:localuser:root"]
+xwayland = true
 # Sharp X11 apps and games on scaled outputs; they see physical resolutions.
-# xwayland_native_resolution = true
-# Umbriel announces the X11 interface scale and cursor theme through XSETTINGS.
-# Turn this off to run your own manager, such as xsettingsd.
-# xwayland_xsettings = false
-# Modal dialogs hang on their parent window and follow it. Turn this off to keep them ordinary windows.
-# attach_modal_dialogs = false
+xwayland_native_resolution = true
+xwayland_xsettings = true
+# Modal dialogs hang on their parent window and follow it.
+attach_modal_dialogs = true
+
+# ==============================================================================
+# Environment variables
+# Ported from uwsm/.config/uwsm/env
+#
+[environment]
+BROWSER = "firefox"
+QT_QPA_PLATFORM = "wayland;xcb"
+QT_QPA_PLATFORMTHEME = "qt6ct"
+ELECTRON_OZONE_PLATFORM_HINT = "auto"
+# Enforce XCompose fallback rules across GTK and Qt frameworks
+GTK_IM_MODULE = "xim"
+QT_IM_MODULE = "xim"
+XCOMPOSEFILE = "/home/pamod/.XCompose"
 
 # ==============================================================================
 # Lid events
 # Remove the laptop panel from the desktop while the lid is closed, then
-# restore it when the lid opens. Replace eDP-1 with the name from
-# `umbriel outputs`.
+# restore it when the lid opens.
 # https://docs.noctalia.dev/umbriel/configuration/#events
 #
 [events]
-lid_close = "umbriel msg output-disable:eDP-1"
-lid_open = "umbriel msg output-enable:eDP-1"
+lid_close = "umbriel msg output-disable eDP-1"
+lid_open = "umbriel msg output-enable eDP-1"
 
 # ==============================================================================
 # Screencast
-# By default, the first target-changing action during an active share asks for
-# confirmation. Disable that protection only if immediate keybind changes are
-# preferred.
 # https://docs.noctalia.dev/umbriel/configuration/#screencast
 #
 # [screencast]
