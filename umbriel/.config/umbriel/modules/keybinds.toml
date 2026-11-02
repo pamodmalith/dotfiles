@@ -5,7 +5,6 @@
 # Actions: https://docs.noctalia.dev/umbriel/actions/
 #
 [keybinds]
-
 # ------------------
 # Launchers
 # ------------------
@@ -48,7 +47,8 @@
 "Mod+Ctrl+F" = { action = "window-toggle-maximize-to-edges", repeat = false }
 "Mod+F" = { action = "window-toggle-fullscreen", repeat = false }
 "Mod+Shift+P" = { action = "window-toggle-pinned", repeat = false }
-
+"Mod+M" = { action = "window-minimize", repeat = false }
+"Mod+Shift+M" = { action = "window-restore-minimized", repeat = false }
 # ------------------
 # Change Focus
 # ------------------
