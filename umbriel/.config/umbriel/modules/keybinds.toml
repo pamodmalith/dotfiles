@@ -8,32 +8,32 @@
 # ------------------
 # Launchers
 # ------------------
-"Mod+Return" = { action = "spawn:kitty", repeat = false }
-"Mod+E" = { action = "spawn:thunar", repeat = false }
-"Mod+Shift+T" = { action = "spawn:gnome-text-editor --new-window", repeat = false }
-"XF86Calculator" = { action = "spawn:gnome-calculator", repeat = false }
-"Mod+Shift+C" = { action = "spawn:gnome-calculator", repeat = false }
-"Mod+W" = { action = "spawn:firefox", repeat = false }
-"Ctrl+Shift+Escape" = { action = "spawn:kitty -e btop", repeat = false }
+"Mod+Return" = { action = "spawn kitty", repeat = false }
+"Mod+E" = { action = "spawn thunar", repeat = false }
+"Mod+Shift+T" = { action = "spawn gnome-text-editor --new-window", repeat = false }
+"XF86Calculator" = { action = "spawn gnome-calculator", repeat = false }
+"Mod+Shift+C" = { action = "spawn gnome-calculator", repeat = false }
+"Mod+W" = { action = "spawn firefox", repeat = false }
+"Ctrl+Shift+Escape" = { action = "spawn kitty -e btop", repeat = false }
 
 # ------------------
 # Keybind Cheatsheet
 # ------------------
-"Mod+K" = "spawn:umbriel msg cheatsheet-toggle"
+"Mod+K" = "spawn umbriel msg cheatsheet-toggle"
 
 # ------------------
 # Noctalia Shell Controls
 # ------------------
-"Mod+Z" = "spawn:noctalia msg settings-toggle"
-"Mod+X" = "spawn:noctalia msg panel-toggle control-center"
-"Mod+Space" = "spawn:noctalia msg panel-toggle launcher"
-"Mod+Period" = "spawn:noctalia msg panel-toggle launcher /emo"
-"Mod+L" = "spawn:noctalia msg session lock"
-"Mod+Alt+C" = { action = "spawn:noctalia msg panel-toggle session", repeat = false }
-"Mod+Shift+W" = "spawn:noctalia msg panel-toggle wallpaper"
-"Mod+V" = "spawn:noctalia msg panel-toggle clipboard"
-"Mod+N" = "spawn:noctalia msg panel-toggle control-center notifications"
-"Mod+Tab" = "spawn:noctalia msg window-switcher"
+"Mod+Z" = "spawn noctalia msg settings-toggle"
+"Mod+X" = "spawn noctalia msg panel-toggle control-center"
+"Mod+Space" = "spawn noctalia msg panel-toggle launcher"
+"Mod+Period" = "spawn noctalia msg panel-toggle launcher /emo"
+"Mod+L" = "spawn noctalia msg session lock"
+"Mod+Alt+C" = { action = "spawn noctalia msg panel-toggle session", repeat = false }
+"Mod+Shift+W" = "spawn noctalia msg panel-toggle wallpaper"
+"Mod+V" = "spawn noctalia msg panel-toggle clipboard"
+"Mod+N" = "spawn noctalia msg panel-toggle control-center notifications"
+"Mod+Tab" = "spawn noctalia msg window-switcher"
 "Alt+Tab" = "window-focus-next"
 
 # ------------------
@@ -75,38 +75,38 @@
 # ------------------
 # Workspaces 1-10
 # ------------------
-"Mod+1" = "workspace-switch:1"
-"Mod+2" = "workspace-switch:2"
-"Mod+3" = "workspace-switch:3"
-"Mod+4" = "workspace-switch:4"
-"Mod+5" = "workspace-switch:5"
-"Mod+6" = "workspace-switch:6"
-"Mod+7" = "workspace-switch:7"
-"Mod+8" = "workspace-switch:8"
-"Mod+9" = "workspace-switch:9"
-"Mod+0" = "workspace-switch:10"
+"Mod+1" = "workspace-switch 1"
+"Mod+2" = "workspace-switch 2"
+"Mod+3" = "workspace-switch 3"
+"Mod+4" = "workspace-switch 4"
+"Mod+5" = "workspace-switch 5"
+"Mod+6" = "workspace-switch 6"
+"Mod+7" = "workspace-switch 7"
+"Mod+8" = "workspace-switch 8"
+"Mod+9" = "workspace-switch 9"
+"Mod+0" = "workspace-switch 10"
 
-"Mod+Shift+1" = "window-move-to-workspace:1"
-"Mod+Shift+2" = "window-move-to-workspace:2"
-"Mod+Shift+3" = "window-move-to-workspace:3"
-"Mod+Shift+4" = "window-move-to-workspace:4"
-"Mod+Shift+5" = "window-move-to-workspace:5"
-"Mod+Shift+6" = "window-move-to-workspace:6"
-"Mod+Shift+7" = "window-move-to-workspace:7"
-"Mod+Shift+8" = "window-move-to-workspace:8"
-"Mod+Shift+9" = "window-move-to-workspace:9"
-"Mod+Shift+0" = "window-move-to-workspace:10"
+"Mod+Shift+1" = "window-move-to-workspace 1"
+"Mod+Shift+2" = "window-move-to-workspace 2"
+"Mod+Shift+3" = "window-move-to-workspace 3"
+"Mod+Shift+4" = "window-move-to-workspace 4"
+"Mod+Shift+5" = "window-move-to-workspace 5"
+"Mod+Shift+6" = "window-move-to-workspace 6"
+"Mod+Shift+7" = "window-move-to-workspace 7"
+"Mod+Shift+8" = "window-move-to-workspace 8"
+"Mod+Shift+9" = "window-move-to-workspace 9"
+"Mod+Shift+0" = "window-move-to-workspace 10"
 
-"Mod+Shift+Alt+1" = "window-move-to-workspace-silent:1"
-"Mod+Shift+Alt+2" = "window-move-to-workspace-silent:2"
-"Mod+Shift+Alt+3" = "window-move-to-workspace-silent:3"
-"Mod+Shift+Alt+4" = "window-move-to-workspace-silent:4"
-"Mod+Shift+Alt+5" = "window-move-to-workspace-silent:5"
-"Mod+Shift+Alt+6" = "window-move-to-workspace-silent:6"
-"Mod+Shift+Alt+7" = "window-move-to-workspace-silent:7"
-"Mod+Shift+Alt+8" = "window-move-to-workspace-silent:8"
-"Mod+Shift+Alt+9" = "window-move-to-workspace-silent:9"
-"Mod+Shift+Alt+0" = "window-move-to-workspace-silent:10"
+"Mod+Shift+Alt+1" = "window-move-to-workspace-silent 1"
+"Mod+Shift+Alt+2" = "window-move-to-workspace-silent 2"
+"Mod+Shift+Alt+3" = "window-move-to-workspace-silent 3"
+"Mod+Shift+Alt+4" = "window-move-to-workspace-silent 4"
+"Mod+Shift+Alt+5" = "window-move-to-workspace-silent 5"
+"Mod+Shift+Alt+6" = "window-move-to-workspace-silent 6"
+"Mod+Shift+Alt+7" = "window-move-to-workspace-silent 7"
+"Mod+Shift+Alt+8" = "window-move-to-workspace-silent 8"
+"Mod+Shift+Alt+9" = "window-move-to-workspace-silent 9"
+"Mod+Shift+Alt+0" = "window-move-to-workspace-silent 10"
 
 # ------------------
 # Workspace Step Navigation
@@ -129,28 +129,28 @@
 # ------------------
 # Special Workspace (Scratchpad)
 # ------------------
-"Mod+S" = "scratchpad-toggle:s"
-"Mod+Shift+S" = { action = "window-move-to-scratchpad:s", repeat = false }
-"Mod+A" = "scratchpad-toggle:magic"
-"Mod+Shift+A" = { action = "window-move-to-scratchpad:magic", repeat = false }
+"Mod+S" = "scratchpad-toggle s"
+"Mod+Shift+S" = { action = "window-move-to-scratchpad s", repeat = false }
+"Mod+A" = "scratchpad-toggle magic"
+"Mod+Shift+A" = { action = "window-move-to-scratchpad magic", repeat = false }
 
 # ------------------
 # Hardware Controls
 # ------------------
-"XF86AudioRaiseVolume" = { action = "spawn:noctalia msg volume-up", allow_when_locked = true }
-"XF86AudioLowerVolume" = { action = "spawn:noctalia msg volume-down", allow_when_locked = true }
-"XF86AudioMute" = { action = "spawn:noctalia msg volume-mute", allow_when_locked = true, repeat = false }
-"XF86AudioMicMute" = { action = "spawn:noctalia msg mic-mute", allow_when_locked = true, repeat = false }
-"XF86AudioPlay" = { action = "spawn:noctalia msg media toggle", allow_when_locked = true, repeat = false }
-"XF86AudioPause" = { action = "spawn:noctalia msg media toggle", allow_when_locked = true, repeat = false }
-"XF86AudioNext" = { action = "spawn:noctalia msg media next", allow_when_locked = true }
-"XF86AudioPrev" = { action = "spawn:noctalia msg media previous", allow_when_locked = true }
-"XF86MonBrightnessUp" = { action = "spawn:noctalia msg brightness-up", allow_when_locked = true }
-"XF86MonBrightnessDown" = { action = "spawn:noctalia msg brightness-down", allow_when_locked = true }
+"XF86AudioRaiseVolume" = { action = "spawn noctalia msg volume-up", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn noctalia msg volume-down", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn noctalia msg volume-mute", allow_when_locked = true, repeat = false }
+"XF86AudioMicMute" = { action = "spawn noctalia msg mic-mute", allow_when_locked = true, repeat = false }
+"XF86AudioPlay" = { action = "spawn noctalia msg media toggle", allow_when_locked = true, repeat = false }
+"XF86AudioPause" = { action = "spawn noctalia msg media toggle", allow_when_locked = true, repeat = false }
+"XF86AudioNext" = { action = "spawn noctalia msg media next", allow_when_locked = true }
+"XF86AudioPrev" = { action = "spawn noctalia msg media previous", allow_when_locked = true }
+"XF86MonBrightnessUp" = { action = "spawn noctalia msg brightness-up", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn noctalia msg brightness-down", allow_when_locked = true }
 
 # ------------------
 # Utilities
 # ------------------
-"Mod+P" = { action = "spawn:hyprpicker -a -n", repeat = false }
-"Print" = { action = "spawn:noctalia msg screenshot-region", allow_when_locked = true, repeat = false }
-"Mod+Print" = { action = "spawn:noctalia msg screenshot-fullscreen", allow_when_locked = true, repeat = false }
+"Mod+P" = { action = "spawn hyprpicker -a -n", repeat = false }
+"Print" = { action = "spawn noctalia msg screenshot-region", allow_when_locked = true, repeat = false }
+"Mod+Print" = { action = "spawn noctalia msg screenshot-fullscreen", allow_when_locked = true, repeat = false }
