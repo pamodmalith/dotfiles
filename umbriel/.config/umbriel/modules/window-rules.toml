@@ -33,12 +33,12 @@ confine_pointer = true
 
 [[window_rule]]
 match.app_id = '^steam$'
-match.title = '^Friends List$'
+match.title = '^(Friends List|Steam Settings)$'
 default_floating = true
 
 [[window_rule]]
 match.app_id = '^steam$'
-default_floating = true
+# default_floating = true
 default_output = 'HDMI-A-1'
 
 [[window_rule]]
