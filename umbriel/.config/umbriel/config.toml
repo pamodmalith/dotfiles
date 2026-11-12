@@ -19,10 +19,11 @@ files = [
   "modules/input.toml",
   "modules/keybinds.toml",
   "modules/layout.toml",
+  "modules/workspaces.toml",
   "modules/window-rules.toml",
   "modules/layer-rules.toml",
   "modules/hot-corners.toml",
 ]
 
 [include.optional]
-files = []
+files = ["noctalia.toml"]

@@ -3,10 +3,24 @@
 # Outputs are machine-specific. Run `umbriel outputs` to find names and modes.
 # https://docs.noctalia.dev/umbriel/outputs/
 #
-# [output.DP-1]
-# mode = "2560x1440@144"
-# position = [0, 0]
-# scale = 1.25
-# vrr = "fullscreen"
-# hdr = "auto"
-# sdr_transfer = "gamma22" # Or "srgb" for piecewise SDR decoding in HDR.
+
+# Laptop panel (eDP-1)
+[output.eDP-1]
+mode = "1920x1080@60"
+position = [0, 0]
+scale = 1.0
+transform = "normal"
+workspaces = "dynamic"
+min_workspaces = 5
+# workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "gaming"]
+
+# External monitor (HDMI-A-1)
+[output.HDMI-A-1]
+mode = "1920x1080@60"
+position = [1920, 0]
+scale = 1.0
+vrr = "fullscreen"
+workspaces = "dynamic"
+min_workspaces = 5
+# workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "gaming"]
+enabled = true

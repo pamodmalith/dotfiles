@@ -1,0 +1,16 @@
+# ==============================================================================
+# Workspaces & Scratchpads
+# https://docs.noctalia.dev/umbriel/workspaces/
+# https://docs.noctalia.dev/umbriel/scratchpads/
+
+# Workspace rules
+# [[workspace]]
+# name = "gaming"
+# output = "HDMI-A-1"
+
+# Named scratchpads
+[[scratchpad]]
+name = "s"
+
+[[scratchpad]]
+name = "magic"

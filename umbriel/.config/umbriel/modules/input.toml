@@ -1,22 +1,28 @@
 # ==============================================================================
 # Input
-# Enable NumLock when a physical keyboard connects.
+# Ported from input.lua, misc.lua, and uwsm/env
 # https://docs.noctalia.dev/umbriel/input/
 #
-# [input]
-# window_snapping = false # Drop dragged floating windows where released instead of snapping to edges or corners.
-#
+[input]
+middle_click_paste = false
+
+[input.mouse]
+accel_profile = "flat"
+
+[input.touchpad]
+accel_profile = "flat"
+natural_scroll = true
+tap = true
+
 [input.keyboard]
+options = "compose:ralt"
 numlock_toggle = true
 
-# Focus can follow the pointer across tiled, floating, and pinned windows.
-#
-# [input.focus]
-# follows_mouse = true
-# hover_raises = false # Hover focuses only; clicks and keybinds raise.
+[input.cursor]
+theme = "Bibata-Modern-Ice"
+size = 24
+follows_focus = true
 
-# Confine touch input to one display.
-#
-# [input.touch]
-# enabled = true
-# map_to_output = "eDP-1"
+[input.focus]
+follows_mouse = true
+hover_raises = false # Hover focuses only; clicks and keybinds raise.

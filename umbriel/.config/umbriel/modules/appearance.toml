@@ -1,10 +1,23 @@
 # ==============================================================================
 # Appearance
-# Blur uses a smaller radius than the built-in default.
+# Look and feel configuration ported from decorations.lua & colors.lua
 # https://docs.noctalia.dev/umbriel/appearance/
 #
+[appearance]
+prefer_no_csd = true
+border_width = 2
+corner_radius = 10
+opaque_fullscreen = true
+
 [appearance.blur]
-radius = 3
+enabled = true
+optimized = true
+passes = 4
+radius = 5
+
+[colors.border]
+focused = "#82dcccff"
+unfocused = "#798bb2ff"
 
 # Optional title bar with modifier-free dragging and floating frame resizing.
 # [appearance.title_bar]
