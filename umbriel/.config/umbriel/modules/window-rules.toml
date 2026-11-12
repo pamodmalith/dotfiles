@@ -219,3 +219,16 @@ default_floating = true
 default_focused = false
 shadow = false
 default_pinned = true
+
+# Obsidian: main window stays tiled, secondary windows float
+[[window_rule]]
+match.app_id = "^md\\.obsidian\\.Obsidian$"
+match.title = "^(Settings|Community plugins|Options|About|Hotkeys)\\b"
+default_floating = true
+default_floating_size_px = { width = 900, height = 700 }
+
+# Modal dialogs from Obsidian (confirmations, file pickers, etc.)
+[[window_rule]]
+match.app_id = "^md\\.obsidian\\.Obsidian$"
+match.is_dialog = true
+default_floating = true
