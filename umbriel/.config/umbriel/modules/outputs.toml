@@ -11,6 +11,7 @@ position = [0, 0]
 scale = 1.0
 transform = "normal"
 workspaces = "dynamic"
+min_workspaces = 5
 # workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "gaming"]
 
 # External monitor (HDMI-A-1)
@@ -20,5 +21,6 @@ position = [1920, 0]
 scale = 1.0
 vrr = "fullscreen"
 workspaces = "dynamic"
+min_workspaces = 5
 # workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "gaming"]
 enabled = true
